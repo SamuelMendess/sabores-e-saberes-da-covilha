@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Corrigido para pt-BR -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores e Saberes da Covilhã</title>
+    <!-- Links para as fontes do Google (Inter e Lora) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO COM NAVEGAÇÃO -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">Sabores e Saberes da Covilhã</a>
+            <nav>
+                <ul>
+                    <li><a href="#">Loja Online</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <!-- Ícone do carrinho (SVG) -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SEÇÃO HERO (BANNER PRINCIPAL) -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Sabores e Saberes da Covilhã</h1>
+                    <p>Sabores tradicionais e verdadeiros da nossa terra.</p>
+                    <a href="#produtos" class="btn">Conheça nossos produtos</a> <!-- pt-BR -->
+                </div>
+                <div class="hero-image">
+                    <!-- Imagem principal - pode ser lã, queijo ou a broa -->
+                    <img src="images/home.png" alt="Produto principal da Covilhã">
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE PRODUTOS EM DESTAQUE -->
+        <section id="produtos" class="featured-products">
+            <div class="container">
+                <h2>Produtos em destaque</h2>
+                <div class="product-grid">
+                    
+                    <!-- PRODUTO 1 (Exemplo: Queijo) -->
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="https://placehold.co/300x300/F5F3F0/333?text=Queijo+de+Ovelha" alt="Queijo de Ovelha">
+                        </div>
+                        <h3>Queijo de Ovelha</h3>
+                        <p class="price">€ 18.50</p>
+                        <!-- Botão com os atributos 'data' para o JavaScript -->
+                        <button class="btn add-to-cart-btn" data-name="Queijo de Ovelha" data-price="18.50">Adicionar ao carrinho</button> <!-- pt-BR -->
+                    </div>
+
+                    <!-- PRODUTO 2 (Exemplo: Broa) -->
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="https://placehold.co/300x300/F5F3F0/333?text=Broa+de+Milho" alt="Broa de Milho">
+                        </div>
+                        <h3>Broa de Milho</h3>
+                        <p class="price">€ 5.00</p>
+                        <button class="btn add-to-cart-btn" data-name="Broa de Milho" data-price="5.00">Adicionar ao carrinho</button> <!-- pt-BR -->
+                    </div>
+
+                    <!-- PRODUTO 3 (Exemplo: Lã) -->
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="https://placehold.co/300x300/F5F3F0/333?text=Casaco+de+Lã" alt="Casaco de Lã">
+                        </div>
+                        <h3>Casaco de Lã</h3>
+                        <p class="price">€ 95.00</p>
+                        <button class="btn add-to-cart-btn" data-name="Casaco de Lã" data-price="95.00">Adicionar ao carrinho</button> <!-- pt-BR -->
+                    </div>
+
+                    <!-- PRODUTO 4 (Exemplo: Requeijão) -->
+                    <div class="product-card">
+                        <div class="product-image-container">
+                             <img src="https://placehold.co/300x300/F5F3F0/333?text=Requeijão" alt="Requeijão">
+                        </div>
+                        <h3>Requeijão</h3>
+                        <p class="price">€ 4.50</p>
+                        <button class="btn add-to-cart-btn" data-name="Requeijão" data-price="4.50">Adicionar ao carrinho</button> <!-- pt-BR -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DO CARRINHO DE COMPRAS -->
+        <aside class="cart-section">
+            <div class="container">
+                <h2>Meu Carrinho</h2> <!-- pt-BR -->
+                <ul id="cart-items">
+                    <!-- Itens do carrinho aparecerão aqui -->
+                    <li class="cart-empty">Seu carrinho está vazio.</li> <!-- pt-BR -->
+                </ul>
+                <div class="cart-total">
+                    <strong>Total: <span id="cart-total">0.00</span>€</strong>
+                </div>
+                <button id="checkout-btn" class="btn btn-whatsapp">Finalizar Pedido (pelo WhatsApp)</button> <!-- pt-BR -->
+            </div>
+        </aside>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 - <strong>Sabores e Saberes da Covilhã</strong></p>
+            <p>Tradições culinárias e artesanais da Serra da Estrela 🏔️</p>
+        </div>
+    </footer>
+
+    <!-- Script JS no final -->
+    <script src="script.js"></script>
+</body>
+</html>

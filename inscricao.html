@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição de Comerciantes | Sabores e Saberes da Covilhã</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .inscription-hero {
+            background: linear-gradient(135deg, var(--dark-green) 0%, var(--accent-light-green) 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .inscription-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .inscription-hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .inscription-section {
+            padding: 80px 0;
+        }
+
+        .inscription-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .inscription-benefits {
+            background: linear-gradient(135deg, var(--light-beige) 0%, #f0ead5 100%);
+            padding: 40px;
+            border-radius: 12px;
+            border-left: 5px solid var(--dark-green);
+        }
+
+        .inscription-benefits h2 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--dark-green);
+            margin-bottom: 30px;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .benefit-icon {
+            font-size: 1.5rem;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .benefit-text h3 {
+            font-size: 1rem;
+            color: var(--dark-green);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .benefit-text p {
+            font-size: 0.9rem;
+            color: #555;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .inscription-form {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .inscription-form h2 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--dark-green);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark-green);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--dark-green);
+            background-color: #f9f9f9;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form-checkbox input {
+            width: auto;
+            margin-top: 3px;
+            cursor: pointer;
+        }
+
+        .form-checkbox label {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #555;
+        }
+
+        .form-submit {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .form-submit .btn {
+            width: 100%;
+            text-align: center;
+            padding: 14px;
+            font-size: 1rem;
+        }
+
+        .btn-cancel {
+            background: #e8e8e8;
+            color: var(--dark-green);
+            border: 2px solid #ddd;
+        }
+
+        .btn-cancel:hover {
+            background: #d8d8d8;
+        }
+
+        .form-success {
+            display: none;
+            background: #d4edda;
+            border: 2px solid #28a745;
+            color: #155724;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-success h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 900px) {
+            .inscription-container {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-submit {
+                grid-template-columns: 1fr;
+            }
+
+            .inscription-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO COM NAVEGAÇÃO -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">Sabores e Saberes da Covilhã</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Loja Online</a></li>
+                    <li><a href="sobre-covilha.html">Sobre a Covilhã</a></li>
+                    <li><a href="comerciantes.html">Comerciantes</a></li>
+                    <li><a href="inscricao.html">Inscrever-se</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="inscription-hero">
+            <div class="container">
+                <h1>Junte-se à Nossa Comunidade</h1>
+                <p>Compartilhe seus produtos artesanais com o mundo através da plataforma Sabores e Saberes</p>
+            </div>
+        </section>
+
+        <!-- INSCRIPTION SECTION -->
+        <section class="inscription-section">
+            <div class="container inscription-container">
+
+                <!-- BENEFITS SIDE -->
+                <div class="inscription-benefits">
+                    <h2>Por que se inscrever?</h2>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🌍</div>
+                        <div class="benefit-text">
+                            <h3>Alcance Global</h3>
+                            <p>Leve seus produtos para cliente em Portugal e além, sem custos de plataforma.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📱</div>
+                        <div class="benefit-text">
+                            <h3>WhatsApp Integrado</h3>
+                            <p>Receba pedidos direto no WhatsApp, uma ferramenta que você já domina.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎓</div>
+                        <div class="benefit-text">
+                            <h3>Treinamento Gratuito</h3>
+                            <p>Aprenda fotografia com celular, gestão de redes sociais e vendas online.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💰</div>
+                        <div class="benefit-text">
+                            <h3>Custo Zero</h3>
+                            <p>Hospedagem gratuita, sem mensalidades, sem taxas escondidas.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">👥</div>
+                        <div class="benefit-text">
+                            <h3>Comunidade Forte</h3>
+                            <p>Trabalhe junto com outros artesãos, compartilhe experiências e cresça juntos.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🏆</div>
+                        <div class="benefit-text">
+                            <h3>Visibilidade</h3>
+                            <p>Seu perfil e produtos serão destaque na plataforma Sabores e Saberes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORM SIDE -->
+                <div class="inscription-form">
+                    <div class="form-success" id="successMessage">
+                        <h3>✓ Inscrição Enviada!</h3>
+                        <p>Obrigado por se inscrever. Entraremos em contato em breve via WhatsApp.</p>
+                    </div>
+
+                    <h2>Formulário de Inscrição</h2>
+
+                    <form id="inscriptionForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nome">Nome Completo *</label>
+                                <input type="text" id="nome" name="nome" required placeholder="Ex: Maria Silva">
+                            </div>
+                            <div class="form-group">
+                                <label for="marca">Nome da Marca/Ateliê *</label>
+                                <input type="text" id="marca" name="marca" required placeholder="Ex: Ateliê da Serra">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="whatsapp">WhatsApp *</label>
+                                <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(XX) XXXXX-XXXX">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="especialidade">Qual é a sua especialidade? *</label>
+                            <select id="especialidade" name="especialidade" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="La">Artesanato com Lã</option>
+                                <option value="Queijo">Produção de Queijo</option>
+                                <option value="Pao">Produção de Pão</option>
+                                <option value="Gastronomia">Gastronomia Artesanal</option>
+                                <option value="Artesanato">Outro Artesanato</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descricao">Descreva seus produtos e a sua história *</label>
+                            <textarea id="descricao" name="descricao" required placeholder="Conte-nos sobre seus produtos, experiência e o que torna seus artigos especiais..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="produtos">Quais produtos você gostaria de vender? *</label>
+                            <textarea id="produtos" name="produtos" required placeholder="Liste os produtos que você faria disponíveis na plataforma..."></textarea>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="termos" name="termos" required>
+                            <label for="termos">Concordo com os termos de participação na plataforma e autorizo contato via WhatsApp</label>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="reset" class="btn btn-cancel">Cancelar</button>
+                            <button type="submit" class="btn">Enviar Inscrição</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 - <strong>Sabores e Saberes da Covilhã</strong></p>
+            <p>Tradições culinárias e artesanais da Serra da Estrela 🏔️</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('inscriptionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const marca = document.getElementById('marca').value;
+            const email = document.getElementById('email').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const especialidade = document.getElementById('especialidade').value;
+            const descricao = document.getElementById('descricao').value;
+            const produtos = document.getElementById('produtos').value;
+
+            // Montar mensagem para WhatsApp
+            let message = `*NOVA INSCRIÇÃO - SABORES E SABERES*\n\n`;
+            message += `📝 *Dados do Comerciante:*\n`;
+            message += `Nome: ${nome}\n`;
+            message += `Marca/Ateliê: ${marca}\n`;
+            message += `Email: ${email}\n`;
+            message += `WhatsApp: ${whatsapp}\n\n`;
+            message += `🎯 *Especialidade:* ${especialidade}\n\n`;
+            message += `📖 *História:*\n${descricao}\n\n`;
+            message += `🛍️ *Produtos:*\n${produtos}`;
+
+            // Número para receber inscrições (seu WhatsApp)
+            const numeroWhatsApp = '351912345678'; // ALTERAR PARA SEU NÚMERO
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${numeroWhatsApp}?text=${encodedMessage}`;
+
+            // Mostrar mensagem de sucesso
+            document.getElementById('successMessage').style.display = 'block';
+            document.getElementById('inscriptionForm').reset();
+
+            // Abrir WhatsApp após 2 segundos
+            setTimeout(() => {
+                window.open(whatsappURL, '_blank');
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre a Covilhã | Sabores e Saberes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, var(--dark-green) 0%, var(--accent-light-green) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .about-section {
+            padding: 60px 0;
+        }
+
+        .about-section h2 {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            color: var(--dark-green);
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .about-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-content.reverse {
+            direction: rtl;
+        }
+
+        .about-content.reverse > * {
+            direction: ltr;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            color: var(--accent-light-green);
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #f5f3f0 0%, #e8dfd5 100%);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .heritage-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .heritage-card {
+            background: linear-gradient(135deg, var(--light-beige) 0%, #f0ead5 100%);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border-left: 4px solid var(--dark-green);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .heritage-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .heritage-card h3 {
+            font-size: 1.4rem;
+            color: var(--dark-green);
+            margin-bottom: 15px;
+        }
+
+        .heritage-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .heritage-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 50px;
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: var(--dark-green);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--dark-green);
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 12px;
+            width: 2px;
+            height: calc(100% + 38px);
+            background: var(--accent-light-green);
+            opacity: 0.3;
+        }
+
+        .timeline-item:last-child::after {
+            display: none;
+        }
+
+        .timeline-item h3 {
+            font-size: 1.3rem;
+            color: var(--dark-green);
+            margin-bottom: 10px;
+        }
+
+        .timeline-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .cta-about {
+            background: linear-gradient(135deg, var(--dark-green), var(--accent-light-green));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            border-radius: 12px;
+            margin-top: 60px;
+        }
+
+        .cta-about h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .cta-about p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-about .btn {
+            background: white;
+            color: var(--dark-green);
+            font-weight: 600;
+        }
+
+        .cta-about .btn:hover {
+            background: var(--light-beige);
+        }
+
+        @media (max-width: 900px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content.reverse {
+                direction: ltr;
+            }
+
+            .heritage-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO COM NAVEGAÇÃO -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">Sabores e Saberes da Covilhã</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Loja Online</a></li>
+                    <li><a href="sobre-covilha.html">Sobre a Covilhã</a></li>
+                    <li><a href="comerciantes.html">Comerciantes</a></li>
+                    <li><a href="#inscrever">Inscrever-se</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="about-hero">
+            <div class="container">
+                <h1>A Covilhã: Cidade da Lã e Tradição</h1>
+                <p>Descubra a história, a cultura e o coração artesanal de uma comunidade que preserva tradições há séculos</p>
+            </div>
+        </section>
+
+        <!-- MAIN CONTENT -->
+        <section class="about-section">
+            <div class="container">
+                <h2>Um Pouco da Nossa História</h2>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>A Covilhã através dos Tempos</h3>
+                        <p>
+                            Localizada nas encostas da Serra da Estrela, em Portugal, a Covilhã é uma cidade com uma história rica e profunda, 
+                            marcada pela tradição, inovação e espírito comunitário.
+                        </p>
+                        <p>
+                            Durante séculos, a Covilhã desenvolveu-se como um centro de manufatura têxtil, especialmente de lã. 
+                            As águas cristalinas do rio Zêzere e a proximidade com os rebanhos de ovelhas da Serra da Estrela criaram 
+                            as condições perfeitas para que a indústria têxtil florescesse.
+                        </p>
+                        <p>
+                            Hoje, apesar da modernização, a Covilhã mantém viva a sua herança artesanal, com pequenos produtores 
+                            dedicados a preservar técnicas tradicionais de trabalho.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <div style="background: var(--light-beige); padding: 40px; border-radius: 8px; text-align: center; font-size: 3rem;">
+                            🏔️
+                        </div>
+                        <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">Serra da Estrela - Coração da Covilhã</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PATRIMÔNIO CULTURAL -->
+        <section class="about-section" style="background: linear-gradient(to bottom, #ffffff 0%, #f9f8f7 100%); padding: 80px 0;">
+            <div class="container">
+                <h2>Patrimônio Cultural e Artesanato</h2>
+                
+                <div class="heritage-grid">
+                    <div class="heritage-card">
+                        <div class="heritage-icon">🧶</div>
+                        <h3>A Lã da Serra</h3>
+                        <p>
+                            O trabalho com lã é a tradição mais emblemática da Covilhã. 
+                            Desde a ovelha até ao produto final, cada peça é feita com cuidado e conhecimento transmitido de geração em geração.
+                        </p>
+                    </div>
+
+                    <div class="heritage-card">
+                        <div class="heritage-icon">🧀</div>
+                        <h3>Queijo de Ovelha IGP</h3>
+                        <p>
+                            O Queijo da Serra da Estrela é protegido por Indicação Geográfica Protegida. 
+                            Produzido com leite fresco de ovelhas locais, é uma iguaria que representa a excelência artesanal.
+                        </p>
+                    </div>
+
+                    <div class="heritage-card">
+                        <div class="heritage-icon">🍞</div>
+                        <h3>Pão Artesanal</h3>
+                        <p>
+                            A broa de milho e o pão artesanal são pilares da gastronomia local. 
+                            Feitos com receitas tradicionais, cada fornada é um ato de amor e dedicação à comunidade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE -->
+        <section class="about-section">
+            <div class="container">
+                <h2>Evolução da Covilhã</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Século XIV - Origem Medieval</h3>
+                        <p>
+                            A Covilhã surge como um pequeno centro de população com ligações ao comércio de lã. 
+                            A localização estratégica e a proximidade com água são fundamentais para o desenvolvimento.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Séculos XVII-XVIII - Auge Têxtil</h3>
+                        <p>
+                            A indústria têxtil prospera com a criação de teares e fábricas de lã. 
+                            A Covilhã torna-se um centro importante de produção têxtil na Península Ibérica.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Século XIX-XX - Industrialização</h3>
+                        <p>
+                            Novas máquinas chegam, mas a tradição artesanal persiste. 
+                            Pequenos ateliês continuam operando ao lado das fábricas maiores, preservando técnicas ancestrais.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Século XXI - Resgate Digital</h3>
+                        <p>
+                            Hoje, através de iniciativas como "Sabores e Saberes", a Covilhã reivindica seu lugar no século digital, 
+                            trazendo os produtos artesanais para o mercado global, sem perder a essência tradicional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-about">
+            <div class="container">
+                <h2>Conheça os Artesãos da Covilhã</h2>
+                <p>
+                    Visite os perfis dos comerciantes locais que mantêm viva a tradição da Covilhã. 
+                    Compre direto dos produtores e apoie a comunidade.
+                </p>
+                <a href="comerciantes.html" class="btn">Ver Comerciantes</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 - <strong>Sabores e Saberes da Covilhã</strong></p>
+            <p>Tradições culinárias e artesanais da Serra da Estrela 🏔️</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

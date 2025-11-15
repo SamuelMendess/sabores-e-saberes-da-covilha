@@ -1,10 +1,29 @@
 // Aguarda o documento HTML estar completamente carregado
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ----- MENU HAMBURGUER -----
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Fechar menu ao clicar em um link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+
     // ----- ATENÇÃO: COLOQUE O NÚMERO DA ARTESÃ AQUI -----
     // Formato internacional: (Código do País) + (Número)
     // Exemplo para Portugal (usando o contexto do projeto): 3519XXXXXXXX
-    const numeroWhatsApp = '351912345678';
+    const numeroWhatsApp = '351912466210';
     // ----------------------------------------------------
 
 

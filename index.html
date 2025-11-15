@@ -16,8 +16,8 @@
     <!-- CABEÇALHO COM NAVEGAÇÃO -->
     <header>
         <div class="container header-content">
-            <a href="#" class="logo">Sabores e Saberes da Covilhã</a>
-            <nav>
+            <a href="index.html" class="logo">Sabores e Saberes da Covilhã</a>
+            <nav id="nav-menu" class="nav-menu">
                 <ul>
                     <li><a href="index.html">Loja Online</a></li>
                     <li><a href="sobre-covilha.html">Sobre a Covilhã</a></li>
@@ -25,6 +25,11 @@
                     <li><a href="inscricao.html">Inscrever-se</a></li>
                 </ul>
             </nav>
+            <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="cart-icon">
                 <!-- Ícone do carrinho (SVG) -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
@@ -61,7 +66,7 @@
                     <!-- PRODUTO 1 (Exemplo: Queijo) -->
                     <div class="product-card">
                         <div class="product-image-container">
-                            <img src="https://placehold.co/300x300/F5F3F0/333?text=Queijo+de+Ovelha" alt="Queijo de Ovelha" loading="lazy">
+                            <img src="images/queijo ovelha.png" alt="Queijo de Ovelha" loading="lazy">
                         </div>
                         <h3>Queijo de Ovelha</h3>
                         <p class="price">€ 18.50</p>
@@ -72,7 +77,7 @@
                     <!-- PRODUTO 2 (Exemplo: Broa) -->
                     <div class="product-card">
                         <div class="product-image-container">
-                            <img src="https://placehold.co/300x300/F5F3F0/333?text=Broa+de+Milho" alt="Broa de Milho" loading="lazy">
+                            <img src="images/broa.png" alt="Broa de Milho" loading="lazy">
                         </div>
                         <h3>Broa de Milho</h3>
                         <p class="price">€ 5.00</p>
@@ -82,7 +87,7 @@
                     <!-- PRODUTO 3 (Exemplo: Lã) -->
                     <div class="product-card">
                         <div class="product-image-container">
-                            <img src="https://placehold.co/300x300/F5F3F0/333?text=Casaco+de+Lã" alt="Casaco de Lã" loading="lazy">
+                            <img src="images/casaco.png" alt="Casaco de Lã" loading="lazy">
                         </div>
                         <h3>Casaco de Lã</h3>
                         <p class="price">€ 95.00</p>
@@ -92,7 +97,7 @@
                     <!-- PRODUTO 4 (Exemplo: Requeijão) -->
                     <div class="product-card">
                         <div class="product-image-container">
-                             <img src="https://placehold.co/300x300/F5F3F0/333?text=Requeijão" alt="Requeijão" loading="lazy">
+                             <img src="images/requei.png" alt="Requeijão" loading="lazy">
                         </div>
                         <h3>Requeijão</h3>
                         <p class="price">€ 4.50</p>

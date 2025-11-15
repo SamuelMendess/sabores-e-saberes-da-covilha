@@ -27,6 +27,7 @@
 ## 🎨 DESIGN VISUAL POR PÁGINA
 
 ### 1️⃣ HOME (index.html)
+
 ```
 ╔════════════════════════════════════════════════════════════╗
 ║                    HEADER VERDE                            ║
@@ -61,6 +62,7 @@
 ```
 
 ### 2️⃣ SOBRE COVILHÃ (sobre-covilha.html)
+
 ```
 ╔════════════════════════════════════════════════════════════╗
 ║            HERO VERDE ESCURO (Verde → Verde Claro)         ║
@@ -102,6 +104,7 @@
 ```
 
 ### 3️⃣ COMERCIANTES (comerciantes.html)
+
 ```
 ╔════════════════════════════════════════════════════════════╗
 ║         HERO VERDE (Comerciantes em Destaque)              ║
@@ -138,6 +141,7 @@
 ```
 
 ### 4️⃣ INSCRIÇÃO (inscricao.html)
+
 ```
 ╔════════════════════════════════════════════════════════════╗
 ║         HERO VERDE (Junte-se à Comunidade)                 ║
@@ -199,6 +203,7 @@
 ## 📱 RESPONSIVIDADE VISUAL
 
 ### Desktop (900px+)
+
 ```
 ┌──────────────────────────────────────────────────────┐
 │              Full Width - 4 Colunas                  │
@@ -209,6 +214,7 @@
 ```
 
 ### Tablet (500px-900px)
+
 ```
 ┌──────────────────────────────────────────────────────┐
 │           Medium Width - 2 Colunas                   │
@@ -222,6 +228,7 @@
 ```
 
 ### Mobile (<500px)
+
 ```
 ┌──────────────────┐
 │  Small Width     │
@@ -246,22 +253,25 @@
 ## 🔄 FLUXO DE INTERAÇÃO
 
 ### Compra de Produto
+
 ```
-User →  Vê Produto  →  Clica Botão  →  Item no Carrinho  →  
-Vê Total  →  Clica Finalizar  →  WhatsApp Abre  →  
+User →  Vê Produto  →  Clica Botão  →  Item no Carrinho  →
+Vê Total  →  Clica Finalizar  →  WhatsApp Abre  →
 Envia Pedido
 ```
 
 ### Inscrição Comerciante
+
 ```
-Novo Comerciante  →  Acessa Página  →  Preenche Formulário  →  
-Clica Enviar  →  Ver Mensagem Sucesso  →  WhatsApp Abre  →  
+Novo Comerciante  →  Acessa Página  →  Preenche Formulário  →
+Clica Enviar  →  Ver Mensagem Sucesso  →  WhatsApp Abre  →
 Você Recebe Inscrição
 ```
 
 ### Navegação
+
 ```
-Qualquer Página  →  Clica Menu  →  Va para Outra Página  →  
+Qualquer Página  →  Clica Menu  →  Va para Outra Página  →
 Menu Segue Consistente  →  Footer com Links
 ```
 
@@ -296,6 +306,7 @@ NÍVEL 4 (Contextual)
 ## ✨ ELEMENTOS ESPECIAIS
 
 ### Buttons
+
 ```
 Normal: Verde Escuro + Gradiente
 ┌────────────────────┐
@@ -309,6 +320,7 @@ Hover: Levanta + Sombra Maior
 ```
 
 ### Cards
+
 ```
 ┌─────────────────────────┐
 │                         │
@@ -322,6 +334,7 @@ Hover: Levanta + Borde Verde
 ```
 
 ### Hover Effects
+
 ```
 Links: Sublinhado que cresce (left to right)
 Images: Zoom leve (scale 1.02)

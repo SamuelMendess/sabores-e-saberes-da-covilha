@@ -28,15 +28,15 @@ Transformei seu site de uma simples loja online para uma **plataforma completa d
 
 ## 📊 COMPARAÇÃO ANTES vs DEPOIS
 
-| Aspecto | ANTES | DEPOIS |
-|---------|-------|--------|
-| **Páginas** | 1 (Home) | 4 (Home + 3 novas) |
-| **Comerciantes** | Genéricos | 4 com histórias |
-| **Para se Inscrever** | Não | ✅ Sim |
-| **Sobre a Cidade** | Não | ✅ Sim com Timeline |
-| **Performance** | Básica | Otimizada (Lazy Loading) |
-| **Documentação** | Nenhuma | 5 guias completos |
-| **ODS Visível** | Implícito | Explícito |
+| Aspecto               | ANTES     | DEPOIS                   |
+| --------------------- | --------- | ------------------------ |
+| **Páginas**           | 1 (Home)  | 4 (Home + 3 novas)       |
+| **Comerciantes**      | Genéricos | 4 com histórias          |
+| **Para se Inscrever** | Não       | ✅ Sim                   |
+| **Sobre a Cidade**    | Não       | ✅ Sim com Timeline      |
+| **Performance**       | Básica    | Otimizada (Lazy Loading) |
+| **Documentação**      | Nenhuma   | 5 guias completos        |
+| **ODS Visível**       | Implícito | Explícito                |
 
 ---
 
@@ -45,6 +45,7 @@ Transformei seu site de uma simples loja online para uma **plataforma completa d
 ### Objetivos de Desenvolvimento Sustentável (ODS)
 
 #### ODS 1 - Erradicação da Pobreza
+
 ```
 ✅ Novo canal de vendas digital → Aumenta renda
 ✅ Alcance global → Mais clientes
@@ -52,6 +53,7 @@ Transformei seu site de uma simples loja online para uma **plataforma completa d
 ```
 
 #### ODS 5 - Igualdade de Gênero
+
 ```
 ✅ Mulheres em destaque → Raquel, Alicia, Thainá
 ✅ Empoderamento digital → Treinamento integrado
@@ -59,6 +61,7 @@ Transformei seu site de uma simples loja online para uma **plataforma completa d
 ```
 
 ### Metodologia de Pesquisa
+
 ```
 ✅ Questões respondidas
 ✅ Fontes secundárias integradas (Casa das Muralhas, UBI Museum)
@@ -73,18 +76,21 @@ Transformei seu site de uma simples loja online para uma **plataforma completa d
 ### Próximos Passos (5 Minutos)
 
 1. **Altere o WhatsApp**
+
    ```
    Arquivo: inscricao.html (linha 180)
    Altere: '351912345678' → seu número
    ```
 
 2. **Teste Tudo**
+
    ```
    Abra no navegador: index.html
    Teste: Carrinho, Links, Formulário
    ```
 
 3. **Publique**
+
    ```powershell
    git add .
    git commit -m "Versão final"
@@ -92,6 +98,7 @@ Transformei seu site de uma simples loja online para uma **plataforma completa d
    ```
 
 4. **Configure GitHub Pages**
+
    ```
    Settings → Pages → main branch → Save
    Aguarde 2-5 minutos
@@ -107,18 +114,21 @@ Transformei seu site de uma simples loja online para uma **plataforma completa d
 ## 💡 DESTAQUES TÉCNICOS
 
 ### Design
+
 - ✅ Verde + Bege + Ouro (identidade visual forte)
 - ✅ Tipografia profissional (Lora + Inter)
 - ✅ Gradientes modernos
 - ✅ Animações suaves
 
 ### Performance
+
 - ✅ Lazy loading de imagens
 - ✅ CSS otimizado
 - ✅ Sem JavaScript desnecessário
 - ✅ Mobile-first
 
 ### Funcionalidade
+
 - ✅ Carrinho dinâmico
 - ✅ Integração WhatsApp automática
 - ✅ Formulário de inscrição
@@ -129,6 +139,7 @@ Transformei seu site de uma simples loja online para uma **plataforma completa d
 ## 📱 EXPERIÊNCIA DO USUÁRIO
 
 ### Comprador
+
 ```
 1. Navega Home
 2. Vê produtos
@@ -138,6 +149,7 @@ Transformei seu site de uma simples loja online para uma **plataforma completa d
 ```
 
 ### Novo Comerciante
+
 ```
 1. Acessa "Inscrever-se"
 2. Preenche formulário
@@ -146,6 +158,7 @@ Transformei seu site de uma simples loja online para uma **plataforma completa d
 ```
 
 ### Visitante Interessado em História
+
 ```
 1. Clica "Sobre a Covilhã"
 2. Aprende história + patrimônio
@@ -217,34 +230,39 @@ git pull origin main
 
 ## ✨ DIFERENCIAIS
 
-| O que torna especial |
-|---------------------|
-| 🌍 Aborda 2 ODS (1 e 5) |
-| 💚 Design com identidade local |
+| O que torna especial              |
+| --------------------------------- |
+| 🌍 Aborda 2 ODS (1 e 5)           |
+| 💚 Design com identidade local    |
 | 🚀 100% funcional em GitHub Pages |
-| 📚 5 documentos de apoio |
-| 👥 Inclui 4 comerciantes reais |
-| 📱 Responsivo e acessível |
-| 🔧 Fácil de manter/expandir |
-| 💰 Custo zero |
+| 📚 5 documentos de apoio          |
+| 👥 Inclui 4 comerciantes reais    |
+| 📱 Responsivo e acessível         |
+| 🔧 Fácil de manter/expandir       |
+| 💰 Custo zero                     |
 
 ---
 
 ## 🎯 RESPONDE ÀS QUESTÕES DE PESQUISA
 
 ### ✅ Qual é o nível de literacia digital?
+
 **Resposta:** Resolvido com WhatsApp (ferramenta que dominam)
 
 ### ✅ Quais as barreiras atuais?
+
 **Resposta:** Medo da tecnologia → Solucionado com design intuitivo
 
 ### ✅ Como valorizar usando narrativa histórica?
+
 **Resposta:** Página "Sobre Covilhã" + Histórias dos comerciantes
 
 ### ✅ Checkout via WhatsApp funciona?
+
 **Resposta:** SIM! 100% validado pela comunidade
 
 ### ✅ Elas continuarão a usar após projeto?
+
 **Resposta:** SIM! Inclui formação + documentação + comunidade
 
 ---
@@ -259,7 +277,7 @@ Você tem um **site profissional, escalável e impactante** que:
 ✅ Inclui documentação  
 ✅ Pronto para apresentar  
 ✅ Fácil de manter  
-✅ Pronto para publicar  
+✅ Pronto para publicar
 
 ---
 
